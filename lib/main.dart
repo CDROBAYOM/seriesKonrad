@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:series/pages/lista_page.dart';
-import 'package:series/pages/pruebas.dart';
-import 'package:series/pages/seriesList_page.dart';
-import 'package:series/pages/series_page.dart';
+import 'package:series/pages/libros.dart';
 import 'package:series/utils/master.dart';
 
 
@@ -17,13 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(            
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        initialRoute: 'master',
-        routes: {
-          'serie'   : ( BuildContext context ) => SeriePage(),
-          'lista'   : ( BuildContext context ) => ListaPage(),
-          'series2' : ( BuildContext context ) => SeriesPage(),          
-          'pruebas' : ( BuildContext context ) => PruebasPage(),          
-          'master'  : ( BuildContext context ) => MasterDetailContainer(),          
+        initialRoute: 'libros',
+        routes: {                    
+          'master'  : ( BuildContext context ) => MasterDetailContainer(),
+          'libros'  : ( BuildContext context ) => Libros(),          
         },
         theme: ThemeData(
           primaryColor: Colors.redAccent,
