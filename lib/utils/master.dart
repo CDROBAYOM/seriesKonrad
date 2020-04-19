@@ -1,4 +1,8 @@
+
+
 import 'package:flutter/material.dart';
+
+import 'package:series/pages/libros%20movil.dart';
 import 'package:series/pages/libros.dart';
 
 class MasterDetailContainer extends StatefulWidget {
@@ -10,23 +14,48 @@ class MasterDetailContainer extends StatefulWidget {
 class _ItemMasterDetailContainerState extends State<MasterDetailContainer> {
   static const int kDualPanelBreakpoint = 600;
 
-  Widget _buildSinglePanelLayout() {
-    
+  void _buildSinglePanelLayout() {
+    Scaffold(
+      appBar: AppBar(
+        title: Text('First Route'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Open route'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LibrosMovilPage()),
+            );
+          },
+        ),
+      ),
+    );
   }
 
-  Widget _buildDualPanelLayout() {     
-    LibrosPage();     
+  void _buildDualPanelLayout() {     
+      Center(
+        child: RaisedButton(
+          child: Text('Open route'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LibrosPage()),
+            );
+          },
+        ),
+      );
   }
 
   @override
   Widget build(BuildContext context) {
-    Widget content;
+   
     var shortestSide = MediaQuery.of(context).size.shortestSide;
 
     if (shortestSide < kDualPanelBreakpoint) {
-      content = _buildSinglePanelLayout();
+       _buildSinglePanelLayout();
     } else {
-      content = _buildDualPanelLayout();
+       _buildDualPanelLayout();
     }    
   }
 }

@@ -1,24 +1,7 @@
-
-
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:series/pages/HtttpRequest.dart';
 
 
-class Libros extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      //title: 'Biblioteca',      
-      theme: new ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: new LibrosPage(),
-    );
-  }
-}
 
 class LibrosPage extends StatefulWidget {
   @override
@@ -26,10 +9,12 @@ class LibrosPage extends StatefulWidget {
 }
 
 class LibrosState extends State<LibrosPage> {
+
   
+
   List<Book> _list;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return new Scaffold(
         appBar: new AppBar(
           title: Text("Series y Peliculas"),          
@@ -133,7 +118,7 @@ class BookWidget extends StatelessWidget {
 
 class BookShower extends StatelessWidget {
   final BookWidget bookWidget;  
-  List<Book> _list;
+  
   BookShower(this.bookWidget);
 
   @override
