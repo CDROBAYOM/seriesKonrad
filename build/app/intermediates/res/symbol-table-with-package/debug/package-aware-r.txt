@@ -1,4 +1,4 @@
-com.example.series
+com.example.entrega3
 attr alpha
 attr coordinatorLayoutStyle
 attr font
