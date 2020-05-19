@@ -58,7 +58,7 @@ class CategoriasPage extends StatelessWidget {
                 direccionamiento,
                 textAlign: TextAlign.center,                                
                 ),              
-              onTap: () => Navigator.pushNamed(context, direccionamiento)  
+              onTap: () => Navigator.pushNamed(context, direccionamiento)
             ),
         ],
       ),

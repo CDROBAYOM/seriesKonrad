@@ -2,6 +2,8 @@
 import 'package:entrega3/Pages/categorias_page.dart';
 import 'package:entrega3/Pages/tema.dart';
 import 'package:entrega3/blocs/theme.dart';
+import 'package:entrega3/pages/page.dart';
+import 'package:entrega3/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:entrega3/Pages/aventura_page.dart';
@@ -35,7 +37,7 @@ class MaterialAppWithTheme extends StatelessWidget {
       home: CategoriasPage(),
       debugShowCheckedModeBanner: false,
         title: 'Series App',
-        initialRoute: 'CategoriasPage',        
+        initialRoute: 'Inicio',        
         routes: {                    
           'CategoriasPage'       : ( BuildContext context ) => CategoriasPage(),
           'Drama'                : ( BuildContext context ) => DramaPage(),
@@ -44,6 +46,8 @@ class MaterialAppWithTheme extends StatelessWidget {
           'Ciencia'              : ( BuildContext context ) => CienciaPage(),
           'Comedia'              : ( BuildContext context ) => ComediaPage(),
           'Terror'               : ( BuildContext context ) => TerrorPage(),          
+          'Inicio'               : ( BuildContext context ) => Splash(),
+          'Page'                 : ( BuildContext context ) => Page(),          
         }
     );
   }
